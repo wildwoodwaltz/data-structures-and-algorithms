@@ -115,7 +115,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  arr.filter((element) => /^[A-J]\w+/.test(element));
+  return arr.filter((element) => /^[A-J]\w+/.test(element));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -177,6 +177,7 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
+
   return str.match(/s(eas)?h?(ells)/g);
 };
 
@@ -197,7 +198,6 @@ describe('Testing challenge 1', () => {
     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
   });
 });
-
 describe('Testing challenge 2', () => {
   test('It should return true if the input contains a lower case w', () => {
     expect(containsW('hello world')).toBe(true);
