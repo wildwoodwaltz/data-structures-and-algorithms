@@ -129,7 +129,6 @@ const howManyTreats = (arr) => {
       for (let j = 0; j < arr[i].items.length; j++) {
         if (arr[i].items[j].name === 'Treats') {
           return arr[i].items[j].quantity;
-
         }
       }
     }
