@@ -124,8 +124,15 @@ const errands = [
 
 const howManyTreats = (arr) => {
   //Identify items, Identify treats, Identify quantity
-  return arr[2].items[1].quantity;
-  //I feel like this is totally a cheeze way of doing it and think there has got to be another way.. .
+  for (let i = 0; i < arr.length; i++)
+    if (arr[i].store === 'Pet store') {
+      for (let j = 0; j < arr[i].items.length; j++) {
+        if (arr[i].items[j].name === 'Treats') {
+          return arr[i].items[j].quantity;
+
+        }
+      }
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------
