@@ -7,6 +7,7 @@
 ### Table of Contents
 
 - [Array-reverse](./python/docs/array-reverse/README.md)
+- [Array-insert-middle](./python/docs/array-insert-middle/README.md)
 
 ### 301 Code Challenges
 
