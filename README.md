@@ -8,6 +8,7 @@
 
 - [Array-reverse](./python/docs/array-reverse/README.md)
 - [Array-insert-middle](./python/docs/array-insert-middle/README.md)
+- [Array-binary search](./python/docs/array-binary-search/README.md)
 
 ### 301 Code Challenges
 
