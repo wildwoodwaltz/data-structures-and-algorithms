@@ -15,5 +15,5 @@ Take a list of any size and a value and add the value to the middle of the list 
 4. add value to list at middle
 5. Return modified array
 
-Big O Space - O(1) - Method will alwyas only return a list that is longer by 1 
+Big O Space - O(n)+1 - Method will return a shallow copy of the list that is longer by 1 
 Big O Time - O(1) - Even as list gets longer we only need to determine it's length to find the middle. 
