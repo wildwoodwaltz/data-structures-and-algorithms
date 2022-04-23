@@ -1,6 +1,6 @@
 class LinkedList:
     """
-    Put docstring here
+    This module allows us to create a linked list by creating nodes and adding them to the beginning of the linked list, all while setting thier value. It is singly linked and only goes one direction. 
     """
 
     def __init__(self):
