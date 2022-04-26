@@ -11,6 +11,7 @@
 - [Array-binary search](./python/docs/array_binary_search/README.md)
 - [Linked-list](./python/docs/linked_list/README.md)
 - [Linked-list-insertions](./python/docs/linked_list_insertions/README.md)
+- [Linked-list-kth-from-last](/data-structures-and-algorithms/python/docs/linked_list_kth/README.md)
 
 ### 301 Code Challenges
 
