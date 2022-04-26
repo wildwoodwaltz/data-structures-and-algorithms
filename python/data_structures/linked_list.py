@@ -81,12 +81,12 @@ class LinkedList:
         while current:
             idx_archive.append(current.value)
             current = current.next
-        idx_archive[::-1]
-        if index > len(idx_archive):
+        idx_archive.reverse()
+        if index >= len(idx_archive):
             raise TargetError
         if index < 0:
             raise TargetError
-        return idx_archive[index-1]            
+        return idx_archive[index]            
 
     def includes(self, query):
         """
