@@ -23,3 +23,31 @@ Big O Space - O(1) When you add an item, you only ever add one to the beginning.
 
 `insert_before` - takes in two parameters a query and a value and will attempt to insert the node before the node which is queried
 `insert_after` - takes in two parameters a query and a value and will attempt to insert the node after the node which is queried
+
+
+## Whiteboard Process -> 
+
+![Whiteboard](./whiteboard.png)
+
+### Append
+
+1. Recieve a linked_list
+2. Recieve value
+2. Iterate through list to determine end
+3. Once end is found create new node at end with value
+
+### Ins before
+
+1. Recieve linked list
+2. Recieve query and value
+3. itterate over linked list to find query
+4. Create new node before queried value
+5. If value doesn't exist or list not started raise exception
+
+### Ins After
+
+1. Recieve linked list
+2. Recieve query and value
+3. itterate over linked list to find query
+4. Create new node after queried value
+5. If value doesn't exist or list not started raise exception
