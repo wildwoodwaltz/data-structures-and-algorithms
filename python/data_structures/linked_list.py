@@ -1,3 +1,4 @@
+
 class LinkedList:
     """
     This module allows us to create a linked list by creating nodes and adding them to the beginning of the linked list, all while setting thier value. It is singly linked and only goes one direction. 
@@ -9,33 +10,95 @@ class LinkedList:
 
     def __str__(self):
         string = ""
-        if self.head == None:
-            return 'NULL'
         current = self.head
         while current:
-            string += f"{ {current.value} } -> "
+            string += f"{{ {current.value} }} -> "
             current = current.next
         string += 'NULL'
-        return string.replace("'", " ")
-         
+        return string
 
-    def insert(self, data=None):   
+    def insert(self, data=None):
+        """
+        Insert a new node to the beginning of Linked_list
+        """
         self.head = Node(data, self.head)
-        
-    def includes(self, query):
-        #method body here
+
+    def append(self, data):
+        """
+        Append Node to end of Linked List
+        """
+        new_node = Node(data)
+        current = self.head
+
+        if not self.head:
+            self.head = new_node
+            return
+
+        while current.next:
+            current = current.next
+
+        current.next = new_node
+
+    def insert_before(self, query, value):
+        """
+        Insert Node before target value
+        """
+        if self.head is None:
+            raise TargetError
+        elif self.head.value == query:
+            self.insert(value)
+            return
         current = self.head
         while current:
-            if current.value == query:
+            try:
+                if current.next.value == query:
+                    old_next = current.next
+                    current.next = Node(value, old_next)
+                    break
+                current = current.next
+            except:
+                raise TargetError
+
+
+    def insert_after(self, query, value):
+        """
+        Insert Node after target value
+        """
+        if self.head is None:
+            raise TargetError
+        current = self.head
+        while current:
+            if current.value is query:
+                current.next = Node(value, current.next)
+                break
+            if current.next is None:
+                raise TargetError
+            current = current.next
+ 
+            
+
+    def includes(self, query):
+        """
+        Does the linked list have queried value? 
+        """
+        current = self.head
+        while current:
+            if current.value is query:
                 return True
-            current=current.next
+            current = current.next
         return False
 
+
 class Node:
+    """
+    Node the base of a linked list.
+    """
     def __init__(self, data=None, next_=None):
         self.value = data
         self.next = next_
 
 
-class TargetError:
-    pass
+class TargetError(Exception):
+    """
+    Custom Exception
+    """

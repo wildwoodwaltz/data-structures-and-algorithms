@@ -83,3 +83,12 @@ def test_includes_false():
     linked_list.insert("banana")
 
     assert not linked_list.includes("cucumber")
+
+def test_list_append_as_string():
+    linked_list = LinkedList()
+
+    linked_list.insert("banana")
+    linked_list.insert("cucumber")
+    linked_list.append("apple")
+
+    assert str(linked_list) == "{ cucumber } -> { banana } -> { apple } -> NULL"

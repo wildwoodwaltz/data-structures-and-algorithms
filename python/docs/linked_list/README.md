@@ -14,4 +14,5 @@ Big O Time - O(n) as the list gets longer it will take longer to search as you m
 Big O Space - O(1) When you add an i tem, you only ever add one to the beginning. It will always only add one at a time. 
 
 ## API
-<!-- Description of each method publicly available to your Linked List --
+
+`insert` - adds a new Node to the beginning of the linked list. 
