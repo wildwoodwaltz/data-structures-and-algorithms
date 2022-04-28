@@ -7,10 +7,10 @@ def test_exists():
     assert zip_lists
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_even_length():
     list_a = LinkedList()
-    for value in reversed([3, 2, 1]):
+    for value in reversed([1, 2, 3]):
         list_a.insert(value)
 
     list_b = LinkedList()
@@ -22,28 +22,28 @@ def test_even_length():
     for value in reversed([1, "a", 2, "b", 3, "c"]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_a_shorter():
     list_a = LinkedList()
     for value in reversed([1, 2]):
         list_a.insert(value)
 
     list_b = LinkedList()
-    for value in reversed(["a", "b", "c"]):
+    for value in reversed(["a", "b", "c", "d"]):
         list_b.insert(value)
 
     actual = zip_lists(list_a, list_b)
     expected = LinkedList()
-    for value in reversed([1, "a", 2, "b", "c"]):
+    for value in reversed([1, "a", 2, "b", "c", "d"]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_b_shorter():
     list_a = LinkedList()
     for value in reversed([1, 2, 3]):
@@ -55,13 +55,28 @@ def test_b_shorter():
 
     actual = zip_lists(list_a, list_b)
     expected = LinkedList()
-    for value in reversed([1, "a", 2, "b", 3, "c"]):
+    for value in reversed([1, "a", 2, "b", 3]):
         expected.insert(value)
 
-    assert actual == expected
+    assert str(actual) == str(expected)
 
+# @pytest.mark.skip("TODO")
+def test_a_way_shorter():
+    list_a = LinkedList()
+    for value in reversed([1, 2]):
+        list_a.insert(value)
 
-@pytest.mark.skip("TODO")
+    list_b = LinkedList()
+    for value in reversed(["a", "b", "c", "d","e","f"]):
+        list_b.insert(value)
+
+    actual = zip_lists(list_a, list_b)
+    expected = LinkedList()
+    for value in reversed([1, "a", 2, "b", "c", "d", "e", "f"]):
+        expected.insert(value)
+
+    assert str(actual) == str(expected)
+# @pytest.mark.skip("TODO")
 def test_a_empty():
     list_a = LinkedList()
     list_b = LinkedList()
@@ -72,10 +87,27 @@ def test_a_empty():
     expected = LinkedList()
     for value in reversed(["a", "b", "c"]):
         expected.insert(value)
-    assert actual == expected
+    assert str(actual) == str(expected)
+
+# @pytest.mark.skip("TODO")
+def test_b_way_shorter():
+    list_a = LinkedList()
+    for value in reversed([1, 2, 3,4,5,6]):
+        list_a.insert(value)
+
+    list_b = LinkedList()
+    for value in reversed(["a", "b"]):
+        list_b.insert(value)
+
+    actual = zip_lists(list_a, list_b)
+    expected = LinkedList()
+    for value in reversed([1, "a", 2, "b", 3,4,5,6]):
+        expected.insert(value)
+
+    assert str(actual) == str(expected)
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_b_empty():
     list_a = LinkedList()
     for value in reversed([1, 2, 3]):
@@ -85,4 +117,4 @@ def test_b_empty():
     expected = LinkedList()
     for value in reversed([1, 2, 3]):
         expected.insert(value)
-    assert actual == expected
+    assert str(actual) == str(expected)
