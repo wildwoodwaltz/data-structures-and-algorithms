@@ -22,6 +22,7 @@ def zip_lists(a, b):
             current_b = current_b.next
             if current_a.next:
                 current_a = current_a.next
+    print(b)
     return a
 # Take two 
         # current_a = a.head
