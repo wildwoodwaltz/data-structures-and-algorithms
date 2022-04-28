@@ -9,7 +9,7 @@ def zip_lists(a, b):
         if current_a:
             return a
 
-    while current_b and current_a:
+    while current_a and current_b:
         if current_a:
             a.insert_after(current_a.value, current_b.value)
             current_a = current_a.next
