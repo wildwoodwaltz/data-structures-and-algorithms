@@ -1,3 +1,5 @@
+
+
 class Queue:
     """
     A list of items that will be retrieved in order of insertion. 
@@ -61,4 +63,3 @@ class InvalidOperationError(Exception):
     '''
     Custom error Handling
     '''
-    pass
