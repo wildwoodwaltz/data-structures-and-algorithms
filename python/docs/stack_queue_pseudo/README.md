@@ -23,5 +23,12 @@ TIME: O(1): IT WILL ALWAYS TAKE THE SAME AMOUNT OF TIME TO ADD ONE ITEM TO A STA
 SPACE: O(1) IT WILL NEVER TAKE MORE SPACE THAN IT ALREADY HAS AS YOU ARE MOVING VALUES NOT COPYING.
 
 TIME: O(N) SINCE YOU HAVE TO MOVE THE STACK TO REVERSE IT THE LONGER THE STACK GETS IN 1 THE LONGER IT TAKES TO POPULATE STACK 2. HOWEVER IF STACK 2 HAS SOMETHING IN IT THEN IT IS O(1) SINCE YOU CAN JUST POP THE VALUE REGARDLESS OF STACK 1'S LENGTH
+
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+
+### Queue
+
+|Method|What does it do?|
+:---:|:---|
+|enqueue | Puts new nodes onto stack 1|
+|dequeue | returns and removes first value in stack 2 unless stack 2 is empty then it moves all of stack 1 to stack 2| 
