@@ -9,8 +9,10 @@ class AnimalShelter:
     def enqueue(self, animal):
         if isinstance(animal, Cat):
             self.cats.enqueue(animal)
-        else:
+        if isinstance(animal, Dog):
             self.dogs.enqueue(animal)
+        else:
+            return("We do not take that animal.")
 
     def dequeue(self, pref):
         if pref == "cat" and self.cats:
