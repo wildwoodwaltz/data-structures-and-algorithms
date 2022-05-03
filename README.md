@@ -15,6 +15,7 @@
 - [Linked-list-zip](./python/docs/linked_list_zip/README.md)
 - [Stacks-and-queues](./python/docs/stack_and_queue/README.md)
 - [Using-Stacks-to-Create-a-Queue](./python/docs/stack_queue_pseudo/README.md)
+- [Animal Shelter Queue](./python/docs/stack_queue_animal_shelter/README.md)
 
 ### 301 Code Challenges
 
