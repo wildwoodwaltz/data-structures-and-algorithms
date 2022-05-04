@@ -14,6 +14,7 @@
 - [Linked-list-kth-from-last](/data-structures-and-algorithms/python/docs/linked_list_kth/README.md)
 - [Linked-list-zip](./python/docs/linked_list_zip/README.md)
 - [Stacks-and-queues](./python/docs/stack_and_queue/README.md)
+- [Stacks-and-queues-brackets](./python/docs/stack_queue_brackets/README.md)
 
 ### 301 Code Challenges
 
