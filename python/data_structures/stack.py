@@ -8,7 +8,7 @@ class Stack:
 
     def push(self, value):
         '''
-        Add item to queue
+        Add item to stack
         '''
         node = Node(value)
         node.next = self.top
@@ -17,7 +17,7 @@ class Stack:
 
     def pop(self):
         '''
-        Remove and return first item from queue
+        Remove and return first item from stack
         '''
         try: 
             temp = self.top
