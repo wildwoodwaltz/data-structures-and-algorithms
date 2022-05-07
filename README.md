@@ -17,7 +17,7 @@
 - [Stacks-and-queues-brackets](./python/docs/stack_queue_brackets/README.md)
 - [Using-Stacks-to-Create-a-Queue](./python/docs/stack_queue_pseudo/README.md)
 - [Animal Shelter Queue](./python/docs/stack_queue_animal_shelter/README.md)
-
+- [Binary Tree](./python/docs/trees/README.md)
 
 ### 301 Code Challenges
 
