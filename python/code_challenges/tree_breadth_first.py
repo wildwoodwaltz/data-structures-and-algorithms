@@ -12,16 +12,13 @@ def breadth_first(tree):
         return tree_values
     if not breadth.front:
         breadth.enqueue(tree.root)
-    else:
-        while breadth.front:
-            root = breadth.dequeue()
-            tree_values.append(root.value)
-            if root.left:
-                breadth.enqueue(root.left)
-            else:
-                pass
-            if root.right:
-                breadth.enqueue(root.right)
-            else:
-                pass
-        return(tree_values)
+    while breadth.front:
+        root = breadth.dequeue()
+        tree_values.append(root.value)
+        if root.left:
+            breadth.enqueue(root.left)
+        if root.right:
+            breadth.enqueue(root.right)
+
+            
+    return(tree_values)
