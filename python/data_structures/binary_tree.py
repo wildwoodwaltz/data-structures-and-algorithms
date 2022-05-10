@@ -87,7 +87,7 @@ class BinaryTree:
             else:
                 breadth.enqueue(front.right)
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, left = None, right = None):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
