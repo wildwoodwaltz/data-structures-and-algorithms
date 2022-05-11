@@ -20,6 +20,7 @@
 - [Binary Tree](./python/docs/trees/README.md)
 - [Binary Tree Max Method](./python/docs/tree_max/README.md)
 - [Breadth first traversal](./python/docs/tree_breadth_first/README.md)
+- [Fizz Buzz on a K-ary Tree](./python/docs/tree_fizz_buzz/README.md)
 
 ### 301 Code Challenges
 
