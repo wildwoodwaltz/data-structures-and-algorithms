@@ -1,3 +1,4 @@
+from data_structures.queue import Queue
 
 class BinaryTree:
     """
@@ -59,10 +60,34 @@ class BinaryTree:
             walk(root.left)
             walk(root.right) 
         walk(self.root)
-        return self.max           
+        return self.max    
 
+    def add(self, data):
+
+        node = Node(data)
+
+        if not self.root:
+            self.root = node
+            return
+
+        breadth = Queue()
+
+        breadth.enqueue(self.root)
+
+        while not breadth.is_empty():
+            front = breadth.dequeue()
+            if not front.left:
+                front.left = node
+                return
+            else:
+                breadth.enqueue(front.left)
+            if not front.right:
+                front.right = node
+                return
+            else:
+                breadth.enqueue(front.right)
 class Node:
-    def __init__(self, value):
+    def __init__(self, value, left = None, right = None):
         self.value = value
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right

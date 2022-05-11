@@ -19,6 +19,7 @@
 - [Animal Shelter Queue](./python/docs/stack_queue_animal_shelter/README.md)
 - [Binary Tree](./python/docs/trees/README.md)
 - [Binary Tree Max Method](./python/docs/tree_max/README.md)
+- [Breadth first traversal](./python/docs/tree_breadth_first/README.md)
 
 ### 301 Code Challenges
 

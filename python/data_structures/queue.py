@@ -14,12 +14,13 @@ class Queue:
         '''
         Add item to queue
         '''
-        if self.rear:
+        if not self.front:
+            self.front = Node(value)
+            self.rear = self.front
+        else:
             self.rear.next = Node(value)
             self.rear = self.rear.next
-        else:
-            self.rear = Node(value)
-            self.front = self.rear
+       
         
 
     def dequeue(self):
