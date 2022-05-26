@@ -99,6 +99,9 @@ class LinkedList:
             current = current.next
         return False
 
+    def display(self):
+        return self.head.value
+
 
 class Node:
     """
