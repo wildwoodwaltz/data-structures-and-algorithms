@@ -1,4 +1,5 @@
 
+from re import I
 from data_structures.linked_list import LinkedList
 
 class Hashtable:
@@ -49,7 +50,6 @@ class Hashtable:
                 return current.value[1]
 
             current = current.next
-
         raise KeyError("Nothing found with that key: ", key)
 
     def keys(self):
@@ -62,7 +62,7 @@ class Hashtable:
                     keys.add(container.value[0])
                     print(keys)
                     container = container.next
-            except: 
+            finally: 
                 continue
         return keys
 
@@ -76,19 +76,22 @@ class Hashtable:
         current = bucket.head
 
         while current:
-            if current.data[0] == key:
+            if current.value[0] == key:
                 return True
             current = current.next
-        return None
+        return False
 
     def hash(self, key):
         '''
         Hash algorithim to convert character values
         '''
         sum = 0
-        for char in key:
-            sum += ord(char)
 
+        if type(key) == str:
+            for char in key:
+                sum += ord(char)
+        if type(key) == int or type(key) == float:
+            sum = key
         sum *= 599
         idx = sum % len(self._buckets)
         return idx
