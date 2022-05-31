@@ -24,6 +24,7 @@
 - [Roman Numeral Converter](./python/code_challenges/roman_numerals.py)
 - [First Duplicate Word](./python/code_challenges/hashtable_repeated_word.py)
 - [Hashtable](./python/data_structures/hashtable.py)
+- [Tree_intersection](./python/code_challenges/tree_intersection.py)
 
 ### 301 Code Challenges
 
