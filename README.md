@@ -22,6 +22,7 @@
 - [Breadth first traversal](./python/docs/tree_breadth_first/README.md)
 - [Fizz Buzz on a K-ary Tree](./python/docs/tree_fizz_buzz/README.md)
 - [Roman Numeral Converter](./python/code_challenges/roman_numerals.py)
+- [First Duplicate Word](./python/code_challenges/hashtable_repeated_word.py)
 
 ### 301 Code Challenges
 
