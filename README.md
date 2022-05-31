@@ -23,6 +23,7 @@
 - [Fizz Buzz on a K-ary Tree](./python/docs/tree_fizz_buzz/README.md)
 - [Roman Numeral Converter](./python/code_challenges/roman_numerals.py)
 - [First Duplicate Word](./python/code_challenges/hashtable_repeated_word.py)
+- [Hashtable](./python/data_structures/hashtable.py)
 
 ### 301 Code Challenges
 
