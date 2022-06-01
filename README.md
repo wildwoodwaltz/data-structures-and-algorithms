@@ -25,6 +25,7 @@
 - [First Duplicate Word](./python/code_challenges/hashtable_repeated_word.py)
 - [Hashtable](./python/data_structures/hashtable.py)
 - [Tree_intersection](./python/code_challenges/tree_intersection.py)
+- [Hashtable Left-Join](./python/docs/hashtable_left_join/README.md)
 
 ### 301 Code Challenges
 
