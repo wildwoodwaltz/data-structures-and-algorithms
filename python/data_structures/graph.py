@@ -9,6 +9,9 @@ class Graph:
         self.type = type_of
 
     def add_node(self, value):
+        '''
+        Adds a node to the graph
+        '''
         vertex = Vertex(value)
         if vertex not in self._adjacency_list:
             self._adjacency_list[vertex] = []
@@ -16,12 +19,21 @@ class Graph:
         raise Exception('Node already exists in dictionary')
 
     def get_nodes(self):
+        '''
+        Returns a list of nodes contained in graph
+        '''
         return list(self._adjacency_list.keys())
 
     def size(self):
+        '''
+        Returns overall size of graph
+        '''
         return len(self._adjacency_list)
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
+        '''
+        Adds a connection between two nodes
+        '''
         if start_vertex not in self._adjacency_list or end_vertex not in self._adjacency_list:
             raise KeyError("Either Start or End Vertex not found in Graph")
         edge = Edge(end_vertex, weight)
@@ -33,25 +45,32 @@ class Graph:
 
 
     def get_neighbors(self, vertex):
+        '''
+        Returns adjacent edges which contain an Edge.value which will return the connected node
+        '''
         return self._adjacency_list[vertex]
     
     def path_exists_between(self, vertex_a, vertex_b):
+        '''
+        Determines if two nodes are connected
+        '''
         pass
 
     def breadth_first(self, vertex):
+        '''
+        Traverses the graph wide first then depth
+        '''
         nodes = []
         breadth = Queue()
         visited = set()
 
         breadth.enqueue(vertex)
         visited.add(vertex)
-        print(visited)
 
         while breadth.is_empty() is False:
             front = breadth.dequeue()
-            print(front)
             nodes.append(front.value)
-            print(nodes)
+
 
             for neighbor in self.get_neighbors(front):
                 if neighbor.vertex not in visited:
