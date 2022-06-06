@@ -34,6 +34,9 @@ class Graph:
 
     def get_neighbors(self, vertex):
         return self._adjacency_list[vertex]
+    
+    def path_exists_between(self, vertex_a, vertex_b):
+        pass
 
     def breadth_first(self, vertex):
         nodes = []
