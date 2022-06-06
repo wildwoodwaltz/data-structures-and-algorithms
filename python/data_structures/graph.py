@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Graph:
     """
     Put docstring here
@@ -14,7 +16,7 @@ class Graph:
         raise Exception('Node already exists in dictionary')
 
     def get_nodes(self):
-        return self._adjacency_list.keys()
+        return list(self._adjacency_list.keys())
 
     def size(self):
         return len(self._adjacency_list)
@@ -32,6 +34,28 @@ class Graph:
 
     def get_neighbors(self, vertex):
         return self._adjacency_list[vertex]
+
+    def breadth_first(self, vertex):
+        nodes = []
+        breadth = Queue()
+        visited = set()
+
+        breadth.enqueue(vertex)
+        visited.add(vertex)
+        print(visited)
+
+        while breadth.is_empty() is False:
+            front = breadth.dequeue()
+            print(front)
+            nodes.append(front.value)
+            print(nodes)
+
+            for neighbor in self.get_neighbors(front):
+                if neighbor.vertex not in visited:
+                    print(neighbor.vertex)
+                    visited.add(neighbor.vertex)
+                    breadth.enqueue(neighbor.vertex)
+        return nodes
 
 
 class Vertex:
