@@ -54,6 +54,7 @@ class Graph:
         '''
         Determines if two nodes are connected
         '''
+        # To Do (Extra goal)
         pass
 
     def breadth_first(self, vertex):
