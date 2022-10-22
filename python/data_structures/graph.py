@@ -21,7 +21,7 @@ class Graph:
         """
         Returns list of nodes 
         """
-        return tuple(self._adjacency_list.keys())
+        return list(set(list(self._adjacency_list.keys())))
 
     def size(self):
         return len(self._adjacency_list)
