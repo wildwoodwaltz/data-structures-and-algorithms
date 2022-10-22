@@ -19,17 +19,17 @@ class Hashtable:
 
         if not bucket:
             self._buckets[idx] = LinkedList()
-
-        
+ 
         '''
         Checks to see if key exists and if does, updates that key, value pair
         '''
-        # current = self._buckets[idx].head
+        current = self._buckets[idx].head
 
-        # while current:
-        #     if current.value[0] == key:
-        #         current.value = (key, value)
-        #     current = current.next
+
+        while current:
+            if current.value[0] == key:
+                current.value = (key, value)
+            current = current.next
                     
         self._buckets[idx].insert((key,value))
 

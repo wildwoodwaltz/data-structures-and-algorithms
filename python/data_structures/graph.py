@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Graph:
     """
     REQ: Optional argument type_of defaults to 'directed' can also be 'bidirectional'
@@ -23,10 +25,17 @@ class Graph:
         """
         return list(set(list(self._adjacency_list.keys())))
 
+
     def size(self):
+        '''
+        Returns overall size of graph
+        '''
         return len(self._adjacency_list)
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
+        '''
+        Adds a connection between two nodes
+        '''
         if start_vertex not in self._adjacency_list or end_vertex not in self._adjacency_list:
             raise KeyError("Either Start or End Vertex not found in Graph")
         edge = Edge(end_vertex, weight)
@@ -38,10 +47,40 @@ class Graph:
 
 
     def get_neighbors(self, vertex):
+        '''
+        Returns adjacent edges which contain an Edge.value which will return the connected node
+        '''
         return self._adjacency_list[vertex]
-
-    def breadth_first(self):
+    
+    def path_exists_between(self, vertex_a, vertex_b):
+        '''
+        Determines if two nodes are connected
+        '''
+        # To Do (Extra goal)
         pass
+
+    def breadth_first(self, vertex):
+        '''
+        Traverses the graph wide first then depth
+        '''
+        nodes = []
+        breadth = Queue()
+        visited = set()
+
+        breadth.enqueue(vertex)
+        visited.add(vertex)
+
+        while breadth.is_empty() is False:
+            front = breadth.dequeue()
+            nodes.append(front.value)
+
+
+            for neighbor in self.get_neighbors(front):
+                if neighbor.vertex not in visited:
+                    print(neighbor.vertex)
+                    visited.add(neighbor.vertex)
+                    breadth.enqueue(neighbor.vertex)
+        return nodes
 
 class Vertex:
     def __init__(self, value):

@@ -20,3 +20,5 @@ Space: This datastructure takes an O(n) space, due to the fact that it takes up 
 `get neighbors` - returns a collection of edges connected to given node.
 
 `size`  returns total number of nodes in graph
+
+`breadth_first` - traverses graph wide before deep for a given node
