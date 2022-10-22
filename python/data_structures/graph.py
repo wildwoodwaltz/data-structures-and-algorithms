@@ -1,5 +1,6 @@
 class Graph:
     """
+    REQ: Optional argument type_of defaults to 'directed' can also be 'bidirectional'
     Graph class non-linear data structure that is used to store data in the form of nodes and edges.
     """
     def __init__(self, type_of='directed'):
@@ -7,6 +8,9 @@ class Graph:
         self.type = type_of
 
     def add_node(self, value):
+        """
+        Adds a node to the graph 
+        """
         vertex = Vertex(value)
         if vertex not in self._adjacency_list:
             self._adjacency_list[vertex] = []
