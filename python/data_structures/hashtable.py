@@ -25,6 +25,7 @@ class Hashtable:
         '''
         current = self._buckets[idx].head
 
+
         while current:
             if current.value[0] == key:
                 current.value = (key, value)

@@ -2,16 +2,17 @@ from data_structures.queue import Queue
 
 class Graph:
     """
-    Put docstring here
+    REQ: Optional argument type_of defaults to 'directed' can also be 'bidirectional'
+    Graph class non-linear data structure that is used to store data in the form of nodes and edges.
     """
     def __init__(self, type_of='directed'):
         self._adjacency_list = {}
         self.type = type_of
 
     def add_node(self, value):
-        '''
-        Adds a node to the graph
-        '''
+        """
+        Adds a node(vertex) to the graph. 
+        """
         vertex = Vertex(value)
         if vertex not in self._adjacency_list:
             self._adjacency_list[vertex] = []
@@ -19,10 +20,11 @@ class Graph:
         raise Exception('Node already exists in dictionary')
 
     def get_nodes(self):
-        '''
-        Returns a list of nodes contained in graph
-        '''
-        return list(self._adjacency_list.keys())
+        """
+        Returns list of nodes 
+        """
+        return list(set(list(self._adjacency_list.keys())))
+
 
     def size(self):
         '''
@@ -79,7 +81,6 @@ class Graph:
                     visited.add(neighbor.vertex)
                     breadth.enqueue(neighbor.vertex)
         return nodes
-
 
 class Vertex:
     def __init__(self, value):
