@@ -40,6 +40,8 @@ class Graph:
     def get_neighbors(self, vertex):
         return self._adjacency_list[vertex]
 
+    def breadth_first(self):
+        pass
 
 class Vertex:
     def __init__(self, value):
