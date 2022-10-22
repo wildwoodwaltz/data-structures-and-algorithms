@@ -14,7 +14,7 @@ class Graph:
         raise Exception('Node already exists in dictionary')
 
     def get_nodes(self):
-        return self._adjacency_list.keys()
+        return list(self._adjacency_list.keys())
 
     def size(self):
         return len(self._adjacency_list)
