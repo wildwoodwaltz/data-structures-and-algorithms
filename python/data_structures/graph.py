@@ -9,7 +9,7 @@ class Graph:
 
     def add_node(self, value):
         """
-        Adds a node to the graph 
+        Adds a node(vertex) to the graph. 
         """
         vertex = Vertex(value)
         if vertex not in self._adjacency_list:
@@ -18,7 +18,10 @@ class Graph:
         raise Exception('Node already exists in dictionary')
 
     def get_nodes(self):
-        return list(self._adjacency_list.keys())
+        """
+        Returns list of nodes 
+        """
+        return tuple(self._adjacency_list.keys())
 
     def size(self):
         return len(self._adjacency_list)
