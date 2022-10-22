@@ -1,6 +1,6 @@
 class Graph:
     """
-    Put docstring here
+    Graph class non-linear data structure that is used to store data in the form of nodes and edges.
     """
     def __init__(self, type_of='directed'):
         self._adjacency_list = {}
